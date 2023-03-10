@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de compras</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>A-Shoes</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="#">Carrito de compras</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="carritoCompras">
+    <h2>Tu carrito de compras</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Total</th>
+        <th>Acción</th>
+      </tr>
+      <tr>
+        <td>Zapato 1</td>
+        <td>$50</td>
+        <td>
+          <input type="number" value="1">
+        </td>
+        <td>$50</td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zapato 2</td>
+        <td>$60</td>
+        <td>
+          <input type="number" value="1">
+        </td>
+        <td>$60</td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td>Total:</td>
+        <td>$110</td>
+      </tr>
+    </table>
+    <a href="#" class="botonCheckout">Realizar compra</a>
+  </div>
+</body>
+</html>
