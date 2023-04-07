@@ -138,6 +138,50 @@ h1 {
     }
 }
 
+/* Estilos para la hoja de contacto */
+
+#form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+#label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #3e8e41;
+}
+
 /* Estilos para el contenedor de los productos */
 .contenedorProductos {
     display: flex;
