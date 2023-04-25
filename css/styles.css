@@ -114,7 +114,7 @@ h1 {
   text-decoration: none;
 }
 
-.menu {
+/*.menu {
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -125,7 +125,7 @@ h1 {
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
-}
+}*/
 
 /* Estilos para el contenedor de los productos */
 .contenedorProductos {
@@ -191,6 +191,22 @@ footer {
   grid-area: footer;
 }
 
+#menu-toggle {
+  display: none; /* Ocultar el botón en dispositivos de pantalla grande */
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  margin: 0 10px;
+}
+
 /* TABLET: estilos menores a 1024px */
 @media screen and (max-width: 1024px) {
   /* grid container */
@@ -202,6 +218,31 @@ footer {
 }
 /* MOBILE: estilos menores a 768px */
 @media screen and (max-width: 768px) {
+  
+   /* Mostrar el botón en dispositivos de pantalla pequeña y mediana */
+   #menu-toggle {
+    display: block;
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  /* Ocultar la lista de opciones de menú en dispositivos de pantalla pequeña y mediana */
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  #menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  
   body {
     grid-template-areas: "header" "nav" "productos" "aside" "footer";
     grid-template-columns: auto;
