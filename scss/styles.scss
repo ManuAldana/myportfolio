@@ -28,7 +28,6 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     z-index: 2;
     grid-area: header;
 }
@@ -36,8 +35,15 @@ header {
 nav {
     background-color: black;
     grid-area: nav;
-    height: 20px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .cabecera {
     a {
@@ -49,6 +55,10 @@ nav {
 
     span {
         font-size: xx-large;
+        font-style: italic;
+        display: flex;
+        align-items: right;
+        justify-content: right;
     }
 
     img {
@@ -127,6 +137,7 @@ h1 {
 .menu {
     display: flex;
     justify-content: space-between;
+    vertical-align: middle;
     padding: 20px;
     background-color: #333;
     color: #fff;
@@ -253,7 +264,12 @@ footer {
 
 #menu {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+    vertical-align: middle;
+    text-align: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -261,6 +277,9 @@ footer {
 
 #menu li {
     margin: 0 10px;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: space-between;
 }
 
 
@@ -278,6 +297,11 @@ footer {
         grid-template-columns: auto;
         grid-template-rows: 100px 80px 1fr 1fr auto auto;
     }
+
+    nav{
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 /* MOBILE: estilos menores a 768px */
@@ -287,9 +311,9 @@ footer {
     /* Mostrar el botón en dispositivos de pantalla pequeña y mediana */
     #menu-toggle {
         display: block;
-        float: right;
-        font-size: 20px;
-        margin-top: 10px;
+        float: left;
+        font-size: 15px;
+        margin-top: 5px;
     }
 
     /* Ocultar la lista de opciones de menú en dispositivos de pantalla pequeña y mediana */
@@ -303,6 +327,7 @@ footer {
     }
 
     #menu li {
+        display: flex;
         margin: 10px 0;
         text-align: center;
     }

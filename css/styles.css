@@ -24,7 +24,6 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 2;
   grid-area: header;
 }
@@ -32,7 +31,13 @@ header {
 nav {
   background-color: black;
   grid-area: nav;
-  height: 20px;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cabecera a img {
@@ -41,6 +46,10 @@ nav {
 }
 .cabecera span {
   font-size: xx-large;
+  font-style: italic;
+  display: flex;
+  align-items: right;
+  justify-content: right;
 }
 .cabecera img {
   height: 30px;
@@ -114,9 +123,10 @@ h1 {
   text-decoration: none;
 }
 
-/*.menu {
+.menu {
   display: flex;
   justify-content: space-between;
+  vertical-align: middle;
   padding: 20px;
   background-color: #333;
   color: #fff;
@@ -125,7 +135,50 @@ h1 {
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
-}*/
+}
+
+/* Estilos para la hoja de contacto */
+#form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+#label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type=submit],
+input[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+  background-color: #3e8e41;
+}
 
 /* Estilos para el contenedor de los productos */
 .contenedorProductos {
@@ -192,12 +245,18 @@ footer {
 }
 
 #menu-toggle {
-  display: none; /* Ocultar el botón en dispositivos de pantalla grande */
+  display: none;
+  /* Ocultar el botón en dispositivos de pantalla grande */
 }
 
 #menu {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+  vertical-align: middle;
+  text-align: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -205,6 +264,9 @@ footer {
 
 #menu li {
   margin: 0 10px;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: space-between;
 }
 
 /* TABLET: estilos menores a 1024px */
@@ -215,18 +277,20 @@ footer {
     grid-template-columns: auto;
     grid-template-rows: 100px 80px 1fr 1fr auto auto;
   }
+  nav {
+    text-align: center;
+    vertical-align: middle;
+  }
 }
 /* MOBILE: estilos menores a 768px */
 @media screen and (max-width: 768px) {
-  
-   /* Mostrar el botón en dispositivos de pantalla pequeña y mediana */
-   #menu-toggle {
+  /* Mostrar el botón en dispositivos de pantalla pequeña y mediana */
+  #menu-toggle {
     display: block;
-    float: right;
-    font-size: 20px;
-    margin-top: 10px;
+    float: left;
+    font-size: 15px;
+    margin-top: 5px;
   }
-
   /* Ocultar la lista de opciones de menú en dispositivos de pantalla pequeña y mediana */
   #menu {
     display: none;
@@ -236,13 +300,11 @@ footer {
     right: 0;
     width: 100%;
   }
-
   #menu li {
+    display: flex;
     margin: 10px 0;
     text-align: center;
   }
-  
-  
   body {
     grid-template-areas: "header" "nav" "productos" "aside" "footer";
     grid-template-columns: auto;
